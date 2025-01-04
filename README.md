@@ -1,7 +1,7 @@
 # DevOpsFDP
 DevOps FDP
 
-Basic commonds 
+Git Basic commands 
 ----------------
 
 git ls-files - list all files in current dierctory  <br>
