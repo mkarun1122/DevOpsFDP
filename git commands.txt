@@ -1,0 +1,330 @@
+https://www.h2kinfosys.com/blog/agile-vs-devops-differences/https://www.spiceworks.com/tech/devops/articles/devops-vs-agile/#lg=1&slide=0https://codefresh.io/learn/jenkins/6-step-jenkins-tutorial-for-beginners/
+https://www.simplilearn.com/tutorials/jenkins-tutorial
+https://www.geeksforgeeks.org/jenkins-tutorial/
+https://www.jenkins.io/doc/tutorials/
+
+
+https://www.simplilearn.com/tutorials/agile-scrum-tutorial
+https://www.geeksforgeeks.org/software-engineering-agile-software-development/
+https://www.geeksforgeeks.org/agile-methodology-tutorial/
+https://www.atlassian.com/devops/frameworks/team-structure
+
+https://www.atlassian.com/devops/what-is-devops
+
+https://www.spiceworks.com/tech/devops/articles/devops-vs-agile/#lg=1&slide=0
+What is Git?
+Why to use Git?
+How to use Git?
+	create account
+	Install Git Desktop (GUI)
+	Git Commands through CLI
+
+open windows explorer
+create directory called C:\git_temp5
+
+open command prompt
+cd c:\git_temp5 (this is a working directory)
+dir (no files here)
+
+git --version
+
+git init
+	command says Initializing empty git repository in C:/git_temp5/.git
+	.git is a hidden folder
+dir (shows nothing)
+dir /a:h (shows .git hidden folder)
+
+open notepad and create first.txt
+This is a first file
+
+dir (shows first.txt file)
+
+git ls-files
+(no files in the local repository)
+
+git status
+git add first.txt
+git status
+	git rm --cached <file> to remove file from staging area
+git commit -m "first.txt file added"
+
+git config --global user.name "activesurya"
+git config --global user.email "activesurya@gmail.com"
+
+git commit "second commit on first.txt"
+
+dir
+git ls-files
+
+create second.txt
+This is a second file
+dir
+
+git ls-files
+
+git add second.txt
+
+git status
+
+git commit -m "second.txt file added"
+
+git status
+
+git ls-files
+
+dir
+
+modify first.txt
+
+git status
+
+git add first.txt
+
+git commit -m "first.txt file modified"
+
+or
+
+git commit -a -m "first.txt file modified"
+
+
+modify second.txt
+git status
+git add second.txt, git commit
+git commit -a -m "one more line added in second.txt file"
+
+git log (generates alphanum id commit id)
+git log --oneline
+
+git log first.txt
+git log second.txt
+
+git log --help
+
+create one more file third.txt
+This is the third file
+
+git status
+
+git add third.txt
+git status
+git commit -m "new file third.txt"
+
+open file3.txt
+make some changes
+
+git status
+
+to see unstaged changes
+
+git diff third.txt
+
+git add third.txt
+
+open third.txt
+	edit again
+
+git diff third.txt
+
+to see the unstaged changes gain 
+
+git diff third.txt
+git diff --staged third.txt
+
+git status
+git commit -a -m "third file changed"
+git status
+
+git remove commands
+	git rm
+	git rm --cached
+	git chekout <filename>
+	git reset <filename>
+
+deleting files from diff layers like working directory, staging area, local repository
+
+dir
+
+git ls-files
+
+git rm third.txt (removes from working dir and local repo)
+
+dir
+
+git ls-files
+
+git status
+
+git commit -m "delete 3 file"
+
+git status
+
+removing from local repository but not from current directory
+
+git rm --cached (i want to remove from local repo but not from pwd)
+
+git rm --cached second.txt
+
+dir
+
+git ls-files
+
+git status (shows second.txt is untracked)
+
+git commit -m "deleted second.txt from local repo"
+
+dir
+
+git status
+
+git ignore command
+
+git status
+
+create .gitignore file
+second.txt
+
+git status
+git add .gitignore
+git commit -m "ignore file added"
+
+git status (not tracking second.txt file)
+
+dir
+
+git checkout <filename> command (will remove changes from the current working directory)
+dir
+
+open first.txt
+make some changes
+
+git status
+
+git checkout -- first.txt (removing changes in the working directory)
+
+git status
+
+git reset (removes the changes of the file from staging area)
+
+git status
+
+modify first.txt
+make some changes
+
+git status
+dir
+
+git add first.txt
+git status
+
+git reset HEAD first.txt 
+
+dir
+
+git status
+
+git reset mixed
+git reset soft
+git reset hard
+
+What is branch?
+Creating a new branch
+Merging the changes into the branch
+Resolving the conflicts due to merge
+
+What is branch?
+Creating a new branch
+	git branch
+	shows * master
+
+	git status
+	git checkout -b b1 master
+	git branch
+	git status
+	dir
+	git log --oneline b1
+	git log --oneline master
+	create a file called third.txt
+	git status
+	git add third.txt
+	git commit -m "third.txt added"
+	git checkout master
+	dir
+	git merge b1 master
+	dir
+	git log --oneline master
+	git log --oneline test
+	
+	 
+	
+Merging the changes into the branch
+
+Resolving the conflicts due to merge
+
+
+
+	
+	
+
+ 
+ 	
+
+
+git log --help
+git branch new_branch
+
+
+https://github.com/activesurya/git_temp3.git
+
+…or create a new repository on the command line
+echo "# git_temp3" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/activesurya/git_temp3.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/activesurya/git_temp3.git
+git branch -M main
+git push -u origin main
+
+
+
+
+	
+
+
+Continuous Development - Eclipse, Visual Studio
+	SCM (Source Code Management) - Git SubVersion BitBucket Perforce GitLab
+CI (Continuous Integration) - Jenkins, Bamboo, Circle CI, Team City
+	UnitTesting - JUnit, HttpUnit, Selenium, NUnit
+	Code Build - Maven, ANT, Gradle
+	Code Analysis - VeraCode, SonarQube
+	Code Artifacts - Nexus, jFrog Artifactory, DockerHub 
+CD (Continuous Deployment) - Jenkins, Ansible, Urban Code, Travis CI, Octopus Deploy
+	Infrastructure - AWS/Docker/K8ts
+	Configuration Management - Ansible, Chef, Salt Stack, Puppet
+Continuous Testing - Selenium, JMeter, Tricentis
+Continuous Monitoring - Nagios, Zabbix, Prometheus 
+	Alerting - Grafana
+
+
+
+usename: vboxuser
+password: changeme
+
+
+5 balls
+3 rubber balls 
+	1 ball- business
+	2 ball - property
+	3 ball - Friends
+2 glass balls
+	1 ball - Health
+	2 ball- Family
+
+https://phoenixnap.com/kb/linux-cat-command#:~:text=The%20cat%20(concatenate)%20command%20in,files%2C%20and%20create%20new%20files.
+
+mana vijayam vinayam nerpali
+mana apajayam dhyryam nerpali
