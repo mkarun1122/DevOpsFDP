@@ -15,6 +15,8 @@ git rm --cached fourth.txt
 
 git reset fouth.txt --- resetting removed files 
 
+git pull -- bring the code changes to local 
+
 
 Sample profile HTML page code
 ----------------------------------
