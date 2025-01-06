@@ -14,5 +14,14 @@ git push - save all chnages to repo <br>
 Sample profile HTML page code
 ----------------------------------
 
-<embed src="D:\IARE\DevOpsFDP\profiledemo1\DevOpsFDP\profileArun.html" type="text/plain" width="300" height="200">
 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The embed element</h1>
+
+<embed src="https://github.com/mkarun1122/DevOpsFDP/blob/main/profileArun.html" type="text/plain" width="300" height="200">
+
+</body>
+</html>
