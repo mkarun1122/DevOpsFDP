@@ -11,6 +11,11 @@ git commit -m " add comment" - commit the chnages into file & ready to push <br>
 git push - save all chnages to repo <br>
 
 
+git rm --cached fourth.txt
+
+git reset fouth.txt --- resetting removed files 
+
+
 Sample profile HTML page code
 ----------------------------------
 
